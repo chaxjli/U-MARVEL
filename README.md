@@ -17,7 +17,7 @@ Building on these insights, we introduce U-MARVEL (Universal Multimodal Retrieva
 
 - [U-MARVEL-Qwen2VL-7B-Instruct](https://huggingface.co/TencentBAC/U-MARVEL-Qwen2VL-7B-Instruct) 🤗
 - [Qwen2-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct)
-- Inference code available at: 
+- Inference code available at: [U-MARVEL-inference](https://github.com/chaxjli/U-MARVEL)
 ## Requirements
 
 To install requirements:
