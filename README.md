@@ -6,6 +6,14 @@ In this study, we systematically analyze the key factors driving effective embed
 
 Building on these insights, we introduce U-MARVEL (Universal Multimodal Retrieval via Embedding Learning), a unified framework that outperforms state-of-the-art competitors on the M-BEIR benchmark in supervised settings and demonstrates strong zero-shot performance on tasks such as composed image retrieval and text-to-video retrieval. These results highlight the generalization potential of our framework across various embedding-based retrieval tasks, providing valuable insights for future research.
 
+
+
+<div align="center">
+  <img src="./figures/figure5.svg" alt="M-BEIR-Local" width="600" height="auto">
+</div>
+
+
+
 ## Model Checkpoints
 
 ```
@@ -70,13 +78,21 @@ sh scripts/eval_zeroshot.sh                # Evaluate zero-shot
 The proposed U-MARVEL framework establishes new state-of-the-art performance across both
 single-model architectures and recall-then-rerank approaches on M-BEIR benchmark.
 
+<div align="center">
 <img src="./figures/figure1.png" alt="M-BEIR-Local" width="700" height="auto">
+</div>
 
+<div align="center">
 <img src="./figures/figure2.png" alt="M-BEIR-Global" width="700" height="auto">
+</div>
 
+<div align="center">
 <img src="./figures/figure3.png" alt="M-BEIR-Zero-shot" width="700" height="auto">
+</div>
 
+<div align="center">
 <img src="./figures/figure4.png" alt="M-BEIR-Zero-shot" width="700" height="auto">
+</div>
 
 
 ## Acknowledgements
