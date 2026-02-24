@@ -1,0 +1,5 @@
+BiQwen2_5_VLForConditionalGeneration
+Qwen2_5_VLModel 这里的 attention_mask 还是 2 维度，包含 forward 和 get_rope_index 这俩函数
+Qwen2_5_VLTextModel 我在这里对 attention mask进行修改，依据的是单向还是双向注意力机制，并赋值给 global_simple_attention_mask 变量
+Qwen2_5_VLDecoderLayer
+Qwen2_5_VLAttention 我在这里对 global_simple_attention_mask 对比使用的 attention_mask 进行打印调试

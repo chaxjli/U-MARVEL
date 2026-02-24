@@ -1,0 +1,10 @@
+# Jupyter Notebook 检查点
+.ipynb_checkpoints/
+
+# Python 编译文件
+__pycache__/
+
+# 其他常见规则
+*.pyc
+*.log
+.env

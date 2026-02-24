@@ -1,0 +1,33 @@
+# 完整配置参数样例
+run:  #自定义训练配置名称，运行时指定此名称
+  env:   env-3.9.16                 # env-novelai
+  run_mode: cluster                 # 可选，运行模式（单机 - standalone 、 集群 - cluster 、 Horovod分布式 - horovod），默认 standalone
+  framework: pytorch                # 框架，在训练配置中未指定时优先选用
+  framework_version: "1.13"         # 框架版本，在训练配置中未指定时优先选用
+  storage:                          # 可选，挂载共享存储的配置。
+  # 在线编码环境中提交训练任务时通过 ENV_CFG 挂载在线编码中的共享存储
+  # 但热挂载的盘不在 ENV_CFG 中，另外 cfs 盘重复挂载会使任务无法启动
+  # 解决方法：提交任务之前先执行： unset ENV_CFG
+    - vrn: vrn://tencentvideounstanding/ceph/stars-ceph-vrn        # 20009 Venus平台上统一资源vrn,可进入Venus平台/资源配置查看：http://venus.oa.com/#/resource/appGroupResource/CephFS
+    - vrn: vrn://tencentvideounstanding/ceph/sata_30124            # 30124
+    - vrn: vrn://tencentvideounstanding/ceph/ceph_cq_shengtai_ssd  # 30155
+    - vrn: vrn://tencentvideounstanding/ceph/ceph_20000    # 20000
+    - vrn: vrn://tencentvideounstanding/ceph/ceph_30105    # 30105
+    - vrn: vrn://tencentvideounstanding/ceph/cephfs_test   # 20023
+    - vrn: vrn://cdpuserface/ceph/ceph_sh_40077
+    - vrn: vrn://cdpuserface/ceph/ceph_40067
+    - vrn: vrn://tencentvideounstanding/cfs/cfs_tag                # cfs-6h0181rn
+    - vrn: vrn://tencentvideounstanding/cfs/cfs_cq2                # cfs-6yawvlod
+    - vrn: vrn://tencentvideounstanding/cfs/cfs-bac-tag            # cfs-7m0d2gmx
+
+
+  resource:                     #可选，训练资源配置，未指定时使用默认值
+    worker_num: 8               #可选，训练worker节点数，默认为1
+    worker:                     #可选，训练worker节点资源配置
+      gpu: 8                    #可选，每个worker节点分配的gpu卡数，默认为0
+
+  program:                                                        #必选，使用训练程序相关配置
+    work_dir: /group/40077/chaxjli/Retrieve/LamRA                 #必选，训练程序的工作目录
+                                                                  #1、如果指定的目录/文件是在线编码的共享存储的代码目录（/data/notebooks/jupyter-notebook/）下，则训练时直接使用共享存储代码的文件
+                                                                  #2、如果指定的目录/文件是在本地磁盘下，则会自动打包目录/文件上传到共享存储
+    main_program: scripts/lamra_ret/mbeir/qwen2_5_vl/vtools_finetune_qwen2_5_vl_casual_atten.py #必选，训练程序的主入口文件路径，相对于work_dir
