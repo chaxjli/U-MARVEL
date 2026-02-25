@@ -27,7 +27,6 @@ Building on these insights, we introduce U-MARVEL (Universal Multimodal Retrieva
 
 - [U-MARVEL-Qwen2VL-7B-Instruct](https://huggingface.co/TencentBAC/U-MARVEL-Qwen2VL-7B-Instruct) 🤗
 - [U-MARVEL-Qwen3VL-4B-Instruct](https://huggingface.co/TencentBAC/U-MARVEL-Qwen3VL-4B-Instruct) 🤗
-- Code available at: [U-MARVEL](https://github.com/chaxjli/U-MARVEL)
 
 ## Requirements
 
@@ -78,7 +77,7 @@ get_training_data_local_format.ipynb
 >
 > Run the `get_training_data_local_format.ipynb` notebook to partition the M-BEIR dataset's queries and candidates into 16 tasks, which will be used for subsequent hard negative mining.
 
-### 2. $\text{U-MARVEL}$
+### 2. U-MARVEL
 
 #### 2.1 Progressive transition
 
@@ -181,7 +180,7 @@ python scripts/umarvel/mbeir/vtools_finetune_qwen2-vl-7b_umarvel_hard_negative_m
 
 > The script `python scripts/umarvel/mbeir/vtools_finetune_qwen2-vl-7b_umarvel_hard_negative_mining-continue_hard.py` is used to compare the performance of a distilled model with that of a model trained using hard negative samples.
 
-### 3. $\text{U-MARVEL}^{+}$
+### 3. U-MARVEL+
 
 To obtain the rerank+ model, execute the following commands:
 
@@ -195,7 +194,7 @@ python scripts/umarvel_rank/u-marvel+/vtools_train_rerank_multi_nodes_only_point
 
 To evaluate our model on M-BEIR, run:
 
-### 1.  $\text{U-MARVEL}$
+### 1.  U-MARVEL
 
 **Evaluate models at each stage**  
 
@@ -217,7 +216,7 @@ sh scripts/eval/bash/eval_mbeir_global.sh
 python scripts/eval/bash/vtools_eval_zero-shot.py
 ```
 
-### 2.  $\text{U-MARVEL}^{+}$
+### 2.  U-MARVEL+
 
 **Evaluate rerank (local version)**  
 
@@ -273,10 +272,10 @@ Many thanks to the code bases from **[LamRA](https://github.com/Code-kunkun/LamR
 ## Citation
 If you use this code for your research or project, please cite:
 ```latex
-@article{li2025umarvel,
-  title={U-MARVEL: Unveiling Key Factors for Universal Multimodal Retrieval via Embedding Learning with MLLMs},
-  author={Li, Xiaojie and Li, Chu and Chen, Shi-Zhe and Chen, Xi},
-  journal={arXiv preprint arXiv:2507.14902},
-  year={2025}
+@inproceedings{ li2026umarvel,
+title={U-{MARVEL}: Unveiling Key Factors for Universal Multimodal Retrieval via Embedding Learning with {MLLM}s},
+author={Xiaojie Li and Chu Li and Shi-Zhe Chen and Xi Chen},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026}
 }
 ```
