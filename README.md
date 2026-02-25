@@ -272,7 +272,7 @@ Many thanks to the code bases from **[LamRA](https://github.com/Code-kunkun/LamR
 ## Citation
 If you use this code for your research or project, please cite:
 ```latex
-@inproceedings{ li2026umarvel,
+@inproceedings{li2026umarvel,
 title={U-{MARVEL}: Unveiling Key Factors for Universal Multimodal Retrieval via Embedding Learning with {MLLM}s},
 author={Xiaojie Li and Chu Li and Shi-Zhe Chen and Xi Chen},
 booktitle={The Fourteenth International Conference on Learning Representations},
