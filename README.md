@@ -200,13 +200,9 @@ To evaluate our model on M-BEIR, run:
 
 ```bash
 python scripts/eval/fast_eval/vtools_eval_mbeir_local_fast_qwen2-vl-7b_umarvel_progressive_transition_m-beir.py 
-
 python scripts/eval/fast_eval/vtools_eval_mbeir_local_fast_qwen2-vl-7b_umarvel_hard_negative_mining.py 
-
 python scripts/eval/fast_eval/vtools_eval_mbeir_local_fast_qwen2-vl-7b_umarvel_distillation.py
-
 python scripts/eval/fast_eval/vtools_eval_mbeir_local_fast_qwen2-vl-7b_umarvel_hard_negative_mining-continue_hard.py
-
 sh scripts/eval/bash/eval_mbeir_global.sh
 ```
 
