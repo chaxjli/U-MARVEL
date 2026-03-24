@@ -227,7 +227,7 @@ python eval/rerank/mbeir_rerank_pointwise_local_for_weight.py
 
 ```bash
 python scripts/eval/rerank/umarvel+/vtools_eval_rerank_mbeir_pointwise_global_umarvel+.py
-python scripts/umarvel_rank/u-marvel+/vtools_train_rerank_multi_nodes_only_pointwise-umarvel+.py
+python eval/rerank/mbeir_rerank_pointwise_global_for_weight.py 
 ```
 
 ---
